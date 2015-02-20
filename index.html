@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: HB
+VERSION: 1.0
+CREATED: 1.24.2013
+ASSIGNMENT: HTML template
+TODO: Add bonus & individual results (array iteration & output).
+-->
+<html lang="en" xmlns:ng="http://angularjs.org" data-ng-app="TheDicer">
+	<head>
+		<meta charset="utf-8">
+		<title> * * The Dicer! * * </title>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="panel" data-ng-controller="processRoll">
+			<h1>The Dicer!</h1>
+
+			<div class="qty">
+				<label for="dieQty">Die Qty: </label>
+				<input type="number" class="inputBox" id="dieQty" data-ng-model="setDieQty" />
+				<br>
+				<label for="dieQtySlider"></label>
+				<input type="range" id="dieQtySlider" min=1 value=1 max=20 step=1 data-ng-model="setDieQty" data-ng-change="updateDieQty(value)">
+			</div>
+
+			<div class="type">
+				<label for="dieType">Die Type: </label>
+				<input type="number" class="inputBox" id="dieType" data-ng-model="setDieType" />
+
+				<fieldset id="qtyRadios">
+					<legend>Choose:</legend>
+					<input type="radio" name="dieTypeRadio" value="4" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d4
+					<input type="radio" name="dieTypeRadio" value="6" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d6
+					<input type="radio" name="dieTypeRadio" value="8" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d8
+					<input type="radio" name="dieTypeRadio" value="10" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d10
+					<input type="radio" name="dieTypeRadio" value="12" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d12
+					<input type="radio" name="dieTypeRadio" value="20" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d20
+					<input type="radio" name="dieTypeRadio" value="100" data-ng-model="setDieType" data-ng-change="updateDieType(value)" />d100
+				</fieldset>
+
+			</div>
+
+			<div class="buttons">
+				<button id="ExplodingRoller" value="Roll!" data-ng-click="performRoll(0)">
+					Exploding Roll
+				</button>
+				<button id="TotalRoller" value="Roll!" data-ng-click="performRoll(1)">
+					Total Roll
+				</button>
+			</div>
+
+			<h3>Result: {{roll}}</h3>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="scripts/modernizr.js"></script>
+		<script src="scripts/angular.min.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

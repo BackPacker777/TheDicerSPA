@@ -1,0 +1,154 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, img, ins, kbd, q, s, samp, small, strike, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.panel {
+	position: relative;
+	background-color: darkslategray;
+	border: 2px solid black;
+	border-radius: 8px;
+	width: 800px;
+	height: 240px;
+	margin: 20px auto auto auto;
+	color: aliceblue;
+	font: normal 100% Cambria, Georgia, serif;
+	-moz-text-shadow: 0 1px 0 rgba(50, 50, 50, 0.100);
+	-webkit-text-shadow: 0 1px 0 rgba(50, 50, 50, 0.100);
+	text-shadow: 0 1px 0 rgba(50, 50, 50, 0.100);
+	-webkit-text-size-adjust: none;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 800;
+	margin: 8px auto 8px auto;
+	text-align: center;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 800;
+	margin: 12px auto 8px auto;
+	text-align: center;
+}
+
+.panel label {
+	font-weight: bold;
+	position: relative;
+	display: block;
+	margin: 0 0 4px 10px;
+}
+
+.panel input[type="number"] {
+	position: relative;
+	color: #000000;
+	width: 50px;
+	margin: 0 4px 0 10px;
+	vertical-align: middle;
+	display: inline;
+	float: left;
+}
+
+.panel input[type='range'] {
+	-webkit-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px #333;
+	background-color: #999;
+	height: 10px;
+	margin: -35px 8px 0 10px;
+	vertical-align: middle;
+	display: inline;
+}
+
+.panel legend {
+	font-weight: bold;
+	position: relative;
+	display: block;
+	margin: 0 0 4px 10px;
+}
+
+.panel input[type="radio"] {
+	vertical-align: middle;
+	margin-left: 12px;
+}
+
+#qtyRadios {
+	display: inline;
+	vertical-align: middle;
+	width: 400px;
+	height: 50px;
+	margin: -22px 0 0 18px;
+}
+
+.qty {
+	width: 280px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	top: 72px;
+	left: 4px;
+	background-color: steelblue;
+	border-radius: 4px;
+	box-shadow: 5px 5px 2px #000000;
+}
+
+.type {
+	width: 500px;
+	height: 70px;
+	display: inline-block;
+	position: absolute;
+	top: 72px;
+	right: 4px;
+	background-color: steelblue;
+	border-radius: 4px;
+	box-shadow: 5px 5px 2px #000000;
+}
+
+.panel h3 {
+	position: relative;
+	bottom: -94px;
+	margin: 0 auto 0 auto;
+}
+
+.buttons {
+	width: 244px;
+	position: relative;
+	top: 85px;
+	margin: 0 auto 0 auto;
+}
+
+.buttons button {
+	width: 120px;
+	color: #000000;
+	margin: 8px auto 8px auto;
+}
